@@ -23,6 +23,13 @@ import org.json.simple.parser.ParseException;
 @Path("/")
 public class UserController {
 
+	/**
+	 * This class holds functions for each of the functions services and calls it in
+	 * the front-end project
+	 * 
+	 */
+	
+	
 	@Context
 	HttpServletRequest request;
 
@@ -75,6 +82,12 @@ public class UserController {
 		return Response.ok(new Viewable("/getFollowers.jsp")).build();
 	}
 
+	/**
+	 *
+	 * @param lat
+	 * @param lon
+	 * @return
+	 */
 	@POST
 	@Path("/updateMyLocation")
 	@Produces(MediaType.TEXT_PLAIN)
@@ -105,6 +118,12 @@ public class UserController {
 		
 	}
 	
+	/**
+	 * 
+	 * @param email
+	 * @param pass
+	 * @return
+	 */
 	@POST
 	@Path("/doLogin")
 	@Produces(MediaType.TEXT_HTML)
@@ -143,6 +162,13 @@ public class UserController {
 
 	}
 
+	/**
+	 * 
+	 * @param name
+	 * @param email
+	 * @param pass
+	 * @return
+	 */
 	@POST
 	@Path("/doSignUp")
 	@Produces(MediaType.TEXT_HTML)
@@ -183,7 +209,12 @@ public class UserController {
 	}
 	
 	
-	
+	/**
+	 * 
+	 * @param id1
+	 * @param id2
+	 * @return
+	 */
 	@POST
 	@Path("/dofollowUser")
     @Produces(MediaType.TEXT_HTML)
@@ -217,6 +248,12 @@ public class UserController {
 	}
     
 	////////////////unfollowUser//////////////////
+	/**
+	 * 
+	 * @param id1
+	 * @param id2
+	 * @return
+	 */
 	@POST
 	@Path("/dounFollowUser")
 	//@Produces(MediaType.TEXT_HTML)
@@ -248,6 +285,11 @@ public class UserController {
 
 	}
 	/////////////getfollowers///////////////
+	/**
+	 * 
+	 * @param id1
+	 * @return
+	 */
 	@POST
 	@Path("/dogetFollowers")
 	//@Produces(MediaType.TEXT_HTML)
@@ -282,7 +324,11 @@ public class UserController {
 	}
 	
 /////////////getFollowerPosition///////////////
-
+/**
+ * 
+ * @param id1
+ * @return
+ */
 @POST
 @Path("/dogetFollowerPosition")
 @Produces(MediaType.TEXT_HTML)

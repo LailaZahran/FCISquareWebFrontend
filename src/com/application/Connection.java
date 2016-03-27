@@ -11,6 +11,18 @@ import java.net.URL;
 
 public class Connection {
 
+	/**
+	 * This class holds the connections to the project for the urls
+	 */
+	
+	
+	/**
+	 * @param serviceUrl
+	 * @param urlParameters
+	 * @param methodType
+	 * @param contentType
+	 * @return
+	 */
 	public static String connect(String serviceUrl, String urlParameters,
 			String methodType, String contentType) {
 		//System.out.println(serviceUrl);
