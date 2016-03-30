@@ -147,7 +147,7 @@ public class UserModel {
 		return null;
 	}
 	
-	//////////// Follow User/////////////////////////
+	//////////// Follow User//////////////
 	/**
 	 * 
 	 * @param id1
@@ -166,8 +166,7 @@ public class UserModel {
 			stmt.setInt(1, id1);
 			stmt.setInt(2, id2);
 			stmt.executeUpdate();
-		 
-			//////////////////////////////////////////////////
+			
 			ResultSet rs = stmt.getGeneratedKeys();
 			if (rs.next()) {
 				UserModel user = new UserModel();
@@ -186,7 +185,7 @@ public class UserModel {
 		}
 		return false;
 	}
-////////////unFollow User/////////////////////////
+////////////unFollow User///////////////
 	/**
 	 * 
 	 * @param id1
@@ -197,7 +196,6 @@ public class UserModel {
 		try {
 			
 			Connection conn = DBConnection.getActiveConnection();
-			//Check if this statement is written correctly or not
 			String sql = "DELETE FROM followers WHERE `followerID` = ? and `followingID` = ?";
 			PreparedStatement stmt;
 			stmt = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
@@ -224,7 +222,7 @@ public class UserModel {
 		return false;
 		}
 	
-	//////////// ID to Name/////////////////////////
+	//////////// ID to Name////////////////////
 	/**
 	 * 
 	 * @param id
@@ -259,7 +257,7 @@ public class UserModel {
 	
 	}
 
-	//////////// get Followers/////////////////////////
+	//////////// get Followers///////////////////
 	/**
 	 * 
 	 * @param id1
@@ -269,7 +267,6 @@ public class UserModel {
 		String name;
 		try {
 			Connection conn = DBConnection.getActiveConnection();
-			//Check if this statement is true or not
 			String sql =" SELECT `followerID` FROM `followers` WHERE `followingID`=?";
 			
 			PreparedStatement stmt;
@@ -321,7 +318,7 @@ public class UserModel {
 		}
 		return false;
 	}
-////////////getFollowerLastPosition/////////////////////////
+////////////getFollowerLastPosition////////////////////
 	/**
 	 * 
 	 * @param followerID

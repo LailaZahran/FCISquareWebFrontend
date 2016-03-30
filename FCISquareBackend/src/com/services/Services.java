@@ -22,28 +22,8 @@ import com.models.UserModel;
 
 @Path("/")
 public class Services {
-
-	/**
-	 * This class holds the services and connect it to the userModel functions
-	 */
 	
-	
-	/**
-	 * 
-	 * @param name
-	 * @param email
-	 * @param pass
-	 * @return
-	 */
-	/*
-	 * @GET
-	 * 
-	 * @Path("/signup")
-	 * 
-	 * @Produces(MediaType.TEXT_HTML) public Response signUp(){ return
-	 * Response.ok(new Viewable("/Signup.jsp")).build(); }
-	 */
-
+    System.out.println("SignUp Service");
 	@POST
 	@Path("/signup")
 	@Produces(MediaType.TEXT_PLAIN)
@@ -60,12 +40,12 @@ public class Services {
 		return json.toJSONString();
 	}
   
-	/**
-	 * 
+	/** 
 	 * @param email
 	 * @param pass
 	 * @return
 	 */
+	 System.out.println("LogIn Service");
 	@POST
 	@Path("/login")
 	@Produces(MediaType.TEXT_PLAIN)
@@ -94,6 +74,7 @@ public class Services {
 	 * @param id2
 	 * @return
 	 */
+	 System.out.println("FollowUser Service");
 	@POST
 	@Path("/followUser")
 	@Produces(MediaType.TEXT_PLAIN)
@@ -110,6 +91,7 @@ public class Services {
 	 * @param id2
 	 * @return
 	 */
+	 System.out.println("UnFollowUser Service");
 	@POST
 	@Path("/unFollowUser")
 	@Produces(MediaType.TEXT_PLAIN)
@@ -126,6 +108,7 @@ public class Services {
 	 * @param id1
 	 * @return
 	 */
+	 System.out.println("getFollowers Service");
 	@POST
 	@Path("/getFollowers")
 	@Produces(MediaType.TEXT_PLAIN)
@@ -150,6 +133,7 @@ public class Services {
 	 * @param id1
 	 * @return
 	 */
+	 System.out.println("getFollowerPosition Service");
 	@POST
 	@Path("/getFollowerPosition")
 	@Produces(MediaType.TEXT_PLAIN)
