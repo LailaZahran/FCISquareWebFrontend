@@ -14,14 +14,31 @@
 	<p> You can show your current position on map and update your position on our database from <a href="/FCISquareApp/app/showLocation"> here</a>
 	
 	<p>Current implemented services
-		"http://se2firstapp-softwareeng2.rhcloud.com/FCISquare/rest/signup ---
+		"http://firstapp-sw2projectfci.rhcloud.com/FCISquare/rest/signup ---
 		{requires: name, email, pass}"</p>
-	<p>and "http://se2firstapp-softwareeng2.rhcloud.com/FCISquare/rest/login ---
+	<p>and "http://firstapp-sw2projectfci.rhcloud.com/FCISquare/rest/login ---
 		{requires: name, pass}"</p>
-	<p>and "http://se2firstapp-softwareeng2.rhcloud.com/FCISquare/rest/updatePosition ---
+	<p>and "http://firstapp-sw2projectfci.rhcloud.com/FCISquare/rest/updatePosition ---
 		{requires: id, lat, long}"</p>
-	<p> All parameters are post parameters </p>
+	
 	
 	<p>you should implement Follow,	UnFollow, getFollowers and getLastPositionOfUser services </p>
+	
+	<p>and "http://firstapp-sw2projectfci.rhcloud.com/FCISquare/rest/followUser ---
+	     {requires: followerid, followingid}"</p>
+	 
+	<p>and "http://firstapp-sw2projectfci.rhcloud.com/FCISquare/rest/unFollowUser ---
+	     {requires: followerid, followingid}"</p>
+	     
+	<p>and "http://firstapp-sw2projectfci.rhcloud.com/FCISquare/rest/getFollowers ---
+	     {requires: id}"</p>
+	     
+	<p>and "http://firstapp-sw2projectfci.rhcloud.com/FCISquare/rest/getFollowerPosition ---
+	     {requires: id}"</p>
+	     
+	  <p> All parameters are post parameters </p>
+	     
+	
+	
 </body>
 </html>
